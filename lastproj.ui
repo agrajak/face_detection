@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FINALPROJECT 8조</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="rand_img">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>590</y>
+      <width>120</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>랜덤 선택</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="detect_btn">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>590</y>
+      <width>120</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>분류 시작</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="val_acc">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>500</y>
+      <width>561</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HY헤드라인M</family>
+      <pointsize>22</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>ACCURACY</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="select_img">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>510</y>
+      <width>120</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>사진 선택하기</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="before">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>120</y>
+      <width>400</width>
+      <height>300</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="select_video">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>510</y>
+      <width>120</width>
+      <height>45</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>영상 선택하기</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="next_img">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>440</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>다음 사진</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="after">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>120</y>
+      <width>400</width>
+      <height>300</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>next_img</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>show_img()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>620</x>
+     <y>457</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>748</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>show_img()</slot>
+  <slot>detect()</slot>
+  <slot>select()</slot>
+ </slots>
+</ui>
